@@ -11,7 +11,7 @@ def query_ai(prompt):
     completions = ai.Completion.create(
         engine = 'text-davinci-003',
         prompt = prompt,
-        max_tokens = 2,
+        max_tokens = 10,
         n = 1,
         stop = None,
         temperature = 0.5
@@ -21,6 +21,6 @@ def query_ai(prompt):
     return message
 
 if __name__ == '__main__':
-    query_ai('hello')
+    query_ai('When is the next full moon?')
     print('It works!')
 
